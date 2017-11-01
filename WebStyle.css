@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #F5F5DC;
+    margin-top: 2em;
+
+    height: 85%;
+    background: url(Wallpaper3.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#navbar > ul {
+    margin: 0;
+    padding: 0;
+    color: #F5F5DC;
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    color: #F5F5DC;
+    background-color: #F5F5DC;
+    font-weight: bold;
+}
+#navbar > ul > li {
+    margin: 0 2em;
+    display: inline-block;
+    color: #F5F5DC;
+    float: right;
+    border-bottom: solid #F5F5DC 2px;
+    position: relative;
+    font-weight: bold;
+}
+
+.nav-link {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color: #F5F5DC;
+    text-decoration: none;
+    font-weight: bold;
+}
