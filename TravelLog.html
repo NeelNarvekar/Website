@@ -3,6 +3,21 @@
 	<head>
 		<title>Travel Log</title>
 		<link rel = "stylesheet" href = "WebStyle.css">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+   		<meta charset="utf-8">
+    	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 75%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 	</head>
 	<h1><center>Look at all the cool places I've been!</center></h1>
 	<br><br>
@@ -67,5 +82,44 @@
 			<p>Went here on an eighth grade sightseeing tour, but also in my senior year of high school as part of the We The People Competition.</p>
 		</div>
 		<center><img src="Wallpaper1.jpg" alt="D.C." style="width:80%;height:500px;"></center>
+		<br>
+	<div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: {lat: -28.024, lng: 140.887}
+        });
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+      var locations = [
+
+        {lat: 19.075984, lng: 72.877656},
+        {lat: 46.813878, lng: -71.207981},
+        {lat: 51.507351, lng: -0.127758},
+        {lat: 48.856614, lng: 2.352222},
+        {lat: 25.047984, lng: -77.355413},
+        {lat: 40.712775, lng: -74.005973},
+        {lat: 37.774929, lng: -122.419416},
+        {lat: 28.538335, lng: -81.379236},
+        {lat: 35.960638, lng: -83.920739},
+        {lat: 33.748995, lng: -84.387982},
+        {lat: 42.360082, lng: -71.058880},
+        {lat: 38.907192, lng: -77.036871},
+      ]
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAryKyOscq_n9iAWsj5dFU2lXgdvbrrJDI&callback=initMap">
+    </script>
 	</body>
 </html>

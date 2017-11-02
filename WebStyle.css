@@ -13,10 +13,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-#India >{
-    width: 500px;
-    height: 600px;
-}
 
 ol.bucket {
     list-style-position: inside;
