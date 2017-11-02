@@ -13,6 +13,16 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+#India >{
+    width: 500px;
+    height: 600px;
+}
+
+ol.bucket {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
 
 #navbar > ul {
     margin: 0;
